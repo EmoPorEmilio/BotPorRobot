@@ -14,7 +14,7 @@ const opts = {
   ]
 };
 
-const spamRedesInterval = null;
+let spamRedesInterval = null;
 
 const client = new tmi.client(opts);
 client.on('message', onMessageHandler);
@@ -26,14 +26,39 @@ const sameCommand = (input, command) => {
     return input.toUpperCase() === command.toUpperCase();
 }
 
-const checkCommandsAndReact = (commandInput, target) => {
-    const foundCommand = TEXT_COMMANDS.find(command => sameCommand(command.name, commandInput))
-    if (foundCommand) {
-        client.say(target, foundCommand.message);
-        console.log(`* Executed ${foundCommand.name} command`);
+const commandsList = () => {
+    const reducer = (valorAnterior, valorActual, indice) => {
+        if (indice === 0) {
+            return `${valorAnterior} !${valorActual.name}`
+        }
+        else {
+            return `${valorAnterior}, !${valorActual.name}`
+        }
+    };
+    return TEXT_COMMANDS.reduce(reducer, "Los comandos disponibles son:");
+}
+
+const checkListCommandAndReact = (commandInput, target) => {
+    if (commandInput === 'comandos') {
+        client.say(target, commandsList());
+        console.log(`* Executed !commandos command`);
+        return true;
     }
     else {
-        console.log(`* Unknown command ${commandInput}`);
+        return false;
+    }
+};
+
+const checkCommandsAndReact = (commandInput, target) => {
+    if (!checkListCommandAndReact(commandInput, target)) {
+        const foundCommand = TEXT_COMMANDS.find(command => sameCommand(command.name, commandInput))
+        if (foundCommand) {
+            client.say(target, foundCommand.message);
+            console.log(`* Executed !${foundCommand.name} command`);
+        }
+        else {
+            console.log(`* Unknown command ${commandInput}`);
+        }
     }
 };
 
