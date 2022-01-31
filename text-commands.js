@@ -1,22 +1,22 @@
-const redes = {
+export const REDES_COMMAND = {
     name: 'redes',
     message: 'Seguime en mis redes para enterarte de toda novedad! Podés encontrarlas en: https://emoporemilio.uy',
 };
-const twitter = {
+export const TWITTER_COMMAND = {
     name: 'twitter',
-    message: 'Seguime en Twitter para leer mis desvaríos en formato texto https://twitter.com/emoporemilio',
+    message: 'Seguime en Twitter que tengo Twitter! https://twitter.com/emoporemilio',
 }
-const instagram = {
+export const IG_COMMAND = {
     name: 'instagram',
-    message: 'Seguime en Instagram para ver mis desvaríos en formato audiovisual https://instagram.com/emoporemilio',
+    message: 'Seguime en Instagram que tengo Instagram! https://instagram.com/emoporemilio',
 };
-const tiktok = {
+export const TIKTOK_COMMAND = {
     name: 'tiktok',
-    message: 'Seguime en Tiktok para ver mis desvaríos en formato audiovisual https://tiktok.com/@emoporemilio',
+    message: 'Seguime en Tiktok que tengo Tiktok! https://tiktok.com/@emoporemilio',
 };
-const youtube = {
+export const YT_COMMAND = {
     name: 'youtube',
-    message: 'Suscribite a mi cuenta de Youtube para ver transmisiones anteriores y videos random https://youtube.com/emoporemilio',
+    message: 'Suscribite a mi cuenta de Youtube que tengo cuenta de Youtube! https://youtube.com/emoporemilio',
 };
 
-export const TEXT_COMMANDS = [redes, twitter, instagram, tiktok, youtube];
+export const TEXT_COMMANDS = [REDES_COMMAND, TWITTER_COMMAND, IG_COMMAND, TIKTOK_COMMAND, YT_COMMAND];

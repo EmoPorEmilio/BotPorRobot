@@ -1,6 +1,6 @@
 import tmi from 'tmi.js';
 import {ENV_VARIABLES} from './environment.js';
-import {TEXT_COMMANDS} from './text-commands.js';
+import {TEXT_COMMANDS, REDES_COMMAND} from './text-commands.js';
 
 // Setup client
 
@@ -14,10 +14,13 @@ const opts = {
   ]
 };
 
+const spamRedesInterval = null;
+
 const client = new tmi.client(opts);
 client.on('message', onMessageHandler);
 client.on('connected', onConnectedHandler);
 client.connect();
+
 
 const sameCommand = (input, command) => {
     return input.toUpperCase() === command.toUpperCase();
@@ -47,7 +50,18 @@ function onMessageHandler (target, context, msg, self) {
   }
 }
 
+const spamRedes = () => {
+    client.say(ENV_VARIABLES.CHANNEL_NAME, REDES_COMMAND.message)
+}
+
+const initSpamRedesInterval = () => {
+    spamRedesInterval = setInterval(()=> {
+        spamRedes();
+    }, 60*60*1000);
+}
+
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
-  console.log(`* Connected to ${addr}:${port}`);
+    console.log(`* Connected to ${addr}:${port}`);
+    initSpamRedesInterval();
 }
