@@ -1,0 +1,23 @@
+{
+  "name": "botporrobot",
+  "version": "1.0.0",
+  "description": "Bot para el chat de mi canal de Twitch.tv/EmoPorEmilio",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmoPorEmilio/BotPorRobot.git"
+  },
+  "author": "EmoPorEmilio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmoPorEmilio/BotPorRobot/issues"
+  },
+  "homepage": "https://github.com/EmoPorEmilio/BotPorRobot#readme",
+  "dependencies": {
+    "tmi.js": "^1.8.5"
+  }
+}
