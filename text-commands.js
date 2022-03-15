@@ -30,7 +30,7 @@ export const YT_COMMAND = {
 };
 export const DS_COMMAND = {
   name: 'discord',
-  names: ['discord', 'ds'],
+  names: ['discord', 'ds', 'dc'],
   message: 'Sumate al canal de Discord! https://discord.gg/wTbYuszp',
 };
 export const POKEBRO_COMMAND = {
