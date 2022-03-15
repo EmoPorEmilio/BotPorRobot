@@ -28,11 +28,10 @@ export const YT_COMMAND = {
   message:
     'Suscribite a mi cuenta de Youtube que tengo cuenta de Youtube! https://youtube.com/emoporemilio',
 };
-export const DC_COMMAND = {
+export const DS_COMMAND = {
   name: 'discord',
   names: ['discord', 'ds'],
-  message:
-    'Sumate al canal de Discord! https://discord.gg/wTbYuszphttps://discord.gg/wTbYuszp',
+  message: 'Sumate al canal de Discord! https://discord.gg/wTbYuszp',
 };
 export const POKEBRO_COMMAND = {
   name: 'pokebro',
@@ -53,7 +52,7 @@ export const TEXT_COMMANDS = [
   IG_COMMAND,
   TIKTOK_COMMAND,
   YT_COMMAND,
-  DC_COMMAND,
+  DS_COMMAND,
   POKEBRO_COMMAND,
   GITHUB_COMMAND,
 ];
