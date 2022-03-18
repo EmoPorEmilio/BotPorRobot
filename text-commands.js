@@ -31,7 +31,7 @@ export const YT_COMMAND = {
 export const DS_COMMAND = {
   name: 'discord',
   names: ['discord', 'ds', 'dc'],
-  message: 'Sumate al canal de Discord! https://discord.gg/wTbYuszp',
+  message: 'Sumate al canal de Discord! https://discord.gg/NmzJc5JxJE',
 };
 export const POKEBRO_COMMAND = {
   name: 'pokebro',
