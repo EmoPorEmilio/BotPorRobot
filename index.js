@@ -62,6 +62,10 @@ const checkCommandsAndReact = (commandInput, target) => {
   }
 };
 
+const saveUsernameHit = (username) => {
+  //irAMongo
+  //sumarle1alusuario
+};
 // Called every time a message comes in
 function onMessageHandler(target, context, msg, self) {
   if (self) {
@@ -71,8 +75,11 @@ function onMessageHandler(target, context, msg, self) {
   // Remove whitespace from chat message
   const commandInput = msg.trim();
 
+  saveUsernameHit(context.username);
+
   // If message is a command and the command is known, let's execute it
   if (commandInput[0] === '!') {
+    //console.log(commandInput.substring(1));
     checkCommandsAndReact(commandInput.substring(1), target);
   }
 }

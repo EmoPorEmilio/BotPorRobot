@@ -24,7 +24,7 @@ export const TIKTOK_COMMAND = {
 };
 export const YT_COMMAND = {
   name: 'youtube',
-  names: ['youtube, yt'],
+  names: ['youtube', 'yt'],
   message:
     'Suscribite a mi cuenta de Youtube que tengo cuenta de Youtube! https://youtube.com/emoporemilio',
 };
