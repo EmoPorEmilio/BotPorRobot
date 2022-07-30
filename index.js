@@ -89,9 +89,11 @@ const spamRedes = () => {
 };
 
 const initSpamRedesInterval = () => {
+  /* por ahora no
   spamRedesInterval = setInterval(() => {
     spamRedes();
-  }, 60 * 60 * 1000);
+    //saveUsersToMongo();
+  }, 60 * 60 * 1000);*/
 };
 
 // Called every time the bot connects to Twitch chat
